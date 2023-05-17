@@ -1,0 +1,40 @@
+body{
+    display: flex; /*Display se define se um elemento é tratado como bloco ou elemento inline*/
+    justify-content: center; /*Eixo X, horizontal*/
+    align-items: flex-end;/*Eixo Y, vertical*/
+    min-width: 100vh;
+    padding-top: 350px; /*Caso queira no meio da tela, porém não precisa*/
+}
+
+.loading{
+    max-width: 50%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold ;
+}
+
+.loading__Pedro{
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: rgba(189,189,189,1);
+    margin: 0.6rem 0 2rem 0;
+    display: block; /*o block gera um elemento de bloco*/
+}
+
+.loading__anim{
+    width: 35px; /*35px por 35px ou seja 1 quadrado*/
+    height: 35px;
+    display: inline-block; /*é o circulo*/
+    border: 5px solid rgba(189,189,189,0.25);
+    border-left-color: rgba(3,155,229,1);
+    border-top-color: rgba(3,155,229,1);
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear; /*600ms para o rotate, infinite para ficar funcionando infinitamente e linear para ficar mais contínuo porém tem barras de loading que não usa linear*/
+}
+
+@keyframes rotate{ /*Aqui eu programei a função rotate*/
+
+    to {
+        transform: rotate(1turn);
+     }}
